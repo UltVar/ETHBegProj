@@ -5,7 +5,7 @@ This is a Solidity Program that simulates the minting and burning of tokens. The
 This program mints and burns a singular token, using variable and functions from the Solidity programming language. For the mint function, it adds value to the token, while the burn functions reduces the value of the token. A conditional statement is also added to the burn function so that the token has sufficient value.
 
 # Getting Started
-# Executing Program
+## Executing Program
 To run this program, you have to use the online Remix IDE, which accepts and compiles Solidity code. 
 Here is the website address as well as the code used for this project:
 
@@ -57,3 +57,15 @@ contract MyToken {
     }
 }
 ```
+
+## Naming the Token
+The token should be named with variable as well as the token's address. Those factors are named tokenName and tokenAbbreviation. The total supply of your token is also named totalSupply.
+
+## Minting the Token
+Clicking the mintToken function button from the Deploy tab activates the function itself. It needs the correct values for it to occur, specifically the token address and the value to be minted into the address and the total supply.
+
+## Burning the Token
+Clicking the mintToken function button from the Deploy tab reduces the token's total supply and address. It needs the token's address and the value to be burnt. However, the token's balance must be sufficient to be burnt by the entered value, otherwise, it will return an error.
+
+# Video Demonstration
+Here is a Loom video describing and demonstrating the project: https://www.loom.com/share/1d7f57886696438a9b53175597f05a47?sid=debff05d-20c8-426d-ab38-d520b2c9a99b
