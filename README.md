@@ -67,5 +67,44 @@ Clicking the mintToken function button from the Deploy tab activates the functio
 ## Burning the Token
 Clicking the mintToken function button from the Deploy tab reduces the token's total supply and address. It needs the token's address and the value to be burnt. However, the token's balance must be sufficient to be burnt by the entered value, otherwise, it will return an error.
 
+## Error Handling
+The new file in the project, ETHErrorHandling.sol, adds the error handling functions: Assert, Require, and Revert. The two first functions are used as validation functions, checking whether their parameters are met or not. The revert function is an automatic function that forcibly reverts the actions of the main function. 
+Here is the source code of ETHErrorHandling.sol:
+```
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.22;
+
+contract MyToken {
+
+    // public variables here
+    string public tokenName = "Ultima";
+    string public tokenAbbreviation = "ult";
+    uint public totalSupply = 0;
+
+    // mapping variable here
+    mapping(address => uint) public balance;
+
+    // mint function
+    function mintToken(address _address, uint _value) public{
+        require(_value <= 12000 && totalSupply <= 12000);
+        totalSupply += _value;
+        balance[_address] += _value;
+        assert(totalSupply <= 12000);
+    }
+
+    // burn function
+    function burnToken(address _address, uint _value) public{
+        totalSupply -= _value;
+        balance[_address] -= _value;
+        if(totalSupply < 0){
+            revert();
+        }
+    }
+}
+```
+The Assert and Require functions are used in the MintToken function, checking whether the inputted value and the value of totalSupply have reached 12000. The Revert function is used in an if-statement in which checks if the totalSupply is less than zero.
+
 # Video Demonstration
 Here is a Loom video describing and demonstrating the project: https://www.loom.com/share/1d7f57886696438a9b53175597f05a47?sid=debff05d-20c8-426d-ab38-d520b2c9a99b
+
+Here is a Loom video about the Error Handling of the new file: 
