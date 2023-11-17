@@ -107,4 +107,4 @@ The Assert and Require functions are used in the MintToken function, checking wh
 # Video Demonstration
 Here is a Loom video describing and demonstrating the project: https://www.loom.com/share/1d7f57886696438a9b53175597f05a47?sid=debff05d-20c8-426d-ab38-d520b2c9a99b
 
-Here is a Loom video about the Error Handling of the new file: 
+Here is a Loom video about the Error Handling of the new file: https://www.loom.com/share/81004d1275ca458c82ca5f33edded418?sid=c80990b9-f7c2-4ade-b633-98decc5a2d95
